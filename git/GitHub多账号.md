@@ -83,6 +83,16 @@ IdentityFile ~/.ssh/github/matias_github_key/id_rsa
 7. 测试
 这样就应该ok了。可以使用$ ssh -T git@github.com来看一下密钥isa是否连接成功github或者$ ssh -T git@matias_github测试密钥id_rsa (.ssh/github/matias_github_key)是否连接成功github
 
+如果是第一次需要确认一次，(输入yes回车即可)
+```
+matias@192 git-svn % ssh -T matias_github
+The authenticity of host 'github.com (13.250.177.223)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,13.250.177.223' (RSA) to the list of known hosts.
+Hi matiastang! You've successfully authenticated, but GitHub does not provide shell access.
+matias@192 git-svn % 
+```
 我的测试：
 ```
 ~/.ssh/github/matias_github_key » ssh -T matias_github
