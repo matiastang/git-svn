@@ -48,14 +48,19 @@ IdentityFile ~/.ssh/github/matias_github_key/id_rsa
 > $ git@matias_github:***/Demo.git
 
 * 步骤
-项目根目录下，查看链接的仓库地址
+
+1. 项目根目录下，查看链接的仓库地址
 >$git remote -v
-查看默认配置
+
+2. 查看默认配置
 >$vim .git/config
+
 修改host(可以使用$ ssh -T matias_github命令看看是否修改成功:Hi matiastang! You've successfully authenticated, but GitHub does not provide shell access.)
 >$git remote  set-url origin matias_github:matiastang/CSS3.git
+
 查看配置是否修改成功
 >$vim .git/config
+
 查看链接的仓库地址
 >$git remote -v
 
