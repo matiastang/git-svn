@@ -74,6 +74,7 @@ IdentityFile ~/.ssh/github/matias_github_key/id_rsa
 然后添加密钥 id_rsa (.ssh/github/matias_github_key)：
 >$ssh-add ~/.ssh/github/matias_github_key/id_rsa
 
+第一次使用直接添加即可使用
 然后添加默认密钥 id_rsa(.ssh)：
 >$ssh-add ~/.ssh/id_rsa
 
@@ -106,3 +107,9 @@ Hi matiastang! You've successfully authenticated, but GitHub does not provide sh
 ```
 
 补充：ssh-agent 会开启一个进程运行在后台，相当于一个服务。其机制是每隔几十秒向用 SSH 连接的服务器发送数据，由此服务器就不会自动断开跟你的 SSH 连接了。“还在吗 ~ ”。 也因此有时候电脑重启之后需要重新启动ssh-agent令之运行在后台，Windows用户经常要手动启动。
+
+第一次提交建议使用命令行，需要输入github账号信息
+```
+Username for 'https://github.com': 自己的github账号名称
+Password for 'https://matiastang@github.com': github账号密码
+```
